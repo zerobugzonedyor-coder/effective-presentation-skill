@@ -1,37 +1,49 @@
 # effective-presentation
 
-High-quality Agent / Pi skill for creating PPT and presentation decks that are **not boring** and drive **deep understanding + action**.
+High-quality Agent / Pi skills for creating PPT and presentation decks that are **not boring** and drive **deep understanding + action**.
 
-Based on:
-- Nancy Duarte (*Slide:ology*, *Resonate*, density spectrum)
-- PLOS Computational Biology *Ten simple rules for effective presentation slides*
-- Assertion-Evidence research (Penn State / Michael Alley)
-- Guy Kawasaki 10/20/30 rule and related best practices
+## Skills included
+
+### 1. effective-presentation (通用版)
+Research-backed principles from Nancy Duarte, PLOS Ten Simple Rules, Assertion-Evidence method.
+
+### 2. mine-site-electricity-presentation (施工用电专题版)
+针对**矿山工业场地房建项目施工用电规范解读与现场检查要点**的高度适配 skill。
+- 严格聚焦“用电”主线
+- 固定 4章12节结构
+- 内置断言式标题库 + 检查表模板
+- 强制 Ghost-deck 工作流
 
 ## Install in Pi
 
 ```bash
-# From git (recommended)
+# 安装整个仓库（两个 skill 都会被发现）
 pi install git:github.com/zerobugzonedyor-coder/effective-presentation-skill
 
-# Or clone and place in project skills
-# .pi/skills/effective-presentation/ or ~/.pi/agent/skills/effective-presentation/
+# 或者只克隆后放到 skills 目录
+# .pi/skills/ 或 ~/.pi/agent/skills/
 ```
 
-After install, reload Pi (`/reload`) or restart. Then invoke with natural language (e.g. "use the effective presentation skill") or explicit skill commands depending on your Pi setup.
+安装后执行 `/reload`。
 
-## Structure
+## Repository Structure
 
 ```
 effective-presentation-skill/
-├── SKILL.md                  # Main instructions (frontmatter + principles + workflow)
-└── references/
-    ├── ten-simple-rules.md   # PLOS + Duarte density spectrum
-    ├── action-titles.md      # Assertion-Evidence + ghost-deck test
-    └── story-structures.md   # SCQA, Hero’s Journey, checklists
+├── SKILL.md                              # 通用 effective-presentation
+├── references/                           # 通用参考资料
+│   ├── ten-simple-rules.md
+│   ├── action-titles.md
+│   └── story-structures.md
+└── mine-site-electricity-presentation/   # 施工用电专题 skill
+    ├── SKILL.md
+    └── references/
+        ├── content-outline.md
+        ├── action-titles-bank.md
+        └── check-table-template.md
 ```
 
-## Core Principles
+## Core Principles (both skills)
 
 1. One idea per slide
 2. Action titles (title = conclusion sentence)
